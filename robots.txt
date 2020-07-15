@@ -1,1 +1,1 @@
-Sitemap: https://abhiswain97.github.io/MyBlog/sitemap.xml
+Sitemap: www.abhishekswain.me/sitemap.xml
