@@ -2,7 +2,7 @@
 toc: false
 layout: post
 description: Choosing a language to implement DL algorithms from scratch
-categories: [markdown]
+categories: [markdown, fastpages, jupyter]
 comments: true
 image: images/rustvscpp.jpg
 title: Rust v/s C++ for Deep learning
