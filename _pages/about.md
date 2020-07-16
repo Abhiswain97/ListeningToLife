@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-permalink: /downloadcv/
+permalink: /aboutme/
 ---
 
 ![](https://github.com/Abhiswain97/ListeningToLife/blob/master/images/download.png?raw=true)
