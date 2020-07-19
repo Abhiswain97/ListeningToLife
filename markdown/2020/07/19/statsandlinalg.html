@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Statistics and Linear Algebra for ML/DL | Listening To Life</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Statistics and Linear Algebra for ML/DL" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Diving deep into the statistical underpinings and linear algebraic foundations of learning" />
+<meta property="og:description" content="Diving deep into the statistical underpinings and linear algebraic foundations of learning" />
+<link rel="canonical" href="abhishekswain.me/markdown/2020/07/19/statsandlinalg.html" />
+<meta property="og:url" content="abhishekswain.me/markdown/2020/07/19/statsandlinalg.html" />
+<meta property="og:site_name" content="Listening To Life" />
+<meta property="og:image" content="abhishekswain.me/images/stats_linalg.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-19T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Diving deep into the statistical underpinings and linear algebraic foundations of learning","mainEntityOfPage":{"@type":"WebPage","@id":"abhishekswain.me/markdown/2020/07/19/statsandlinalg.html"},"@type":"BlogPosting","url":"abhishekswain.me/markdown/2020/07/19/statsandlinalg.html","headline":"Statistics and Linear Algebra for ML/DL","dateModified":"2020-07-19T00:00:00-05:00","datePublished":"2020-07-19T00:00:00-05:00","image":"abhishekswain.me/images/stats_linalg.png","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="abhishekswain.me/feed.xml" title="Listening To Life" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Statistics and Linear Algebra for ML/DL | Listening To Life</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Statistics and Linear Algebra for ML/DL" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Diving deep into the statistical underpinings and linear algebraic foundations of learning" />
+<meta property="og:description" content="Diving deep into the statistical underpinings and linear algebraic foundations of learning" />
+<link rel="canonical" href="abhishekswain.me/markdown/2020/07/19/statsandlinalg.html" />
+<meta property="og:url" content="abhishekswain.me/markdown/2020/07/19/statsandlinalg.html" />
+<meta property="og:site_name" content="Listening To Life" />
+<meta property="og:image" content="abhishekswain.me/images/stats_linalg.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-19T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Diving deep into the statistical underpinings and linear algebraic foundations of learning","mainEntityOfPage":{"@type":"WebPage","@id":"abhishekswain.me/markdown/2020/07/19/statsandlinalg.html"},"@type":"BlogPosting","url":"abhishekswain.me/markdown/2020/07/19/statsandlinalg.html","headline":"Statistics and Linear Algebra for ML/DL","dateModified":"2020-07-19T00:00:00-05:00","datePublished":"2020-07-19T00:00:00-05:00","image":"abhishekswain.me/images/stats_linalg.png","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="abhishekswain.me/feed.xml" title="Listening To Life" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Listening To Life</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">About Me</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Statistics and Linear Algebra for ML/DL</h1><p class="page-description">Diving deep into the statistical underpinings and linear algebraic foundations of learning</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-07-19T00:00:00-05:00" itemprop="datePublished">
+        Jul 19, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#probability--statistics">Probability &amp; Statistics</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#books">Books:</a></li>
+<li class="toc-entry toc-h2"><a href="#video-lectures">Video lectures:</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#linear-algebra">Linear Algebra</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#books-1">Books:</a></li>
+<li class="toc-entry toc-h2"><a href="#video-lectures-1">Video lectures:</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#applied-resources">Applied resources</a></li>
+</ul><p>Hey there! 👋😃</p>
+
+<p>Today, I am gonna talk about something I have been meaning to do for the longest amout of time. I am now many months into my ML journey, so I have now quite a bit of experience. So, I have a basic understanding of the ML/DL algos but it always feels like I lack in explaining why something works over the others. This is where the mathematical part comes in. Having a sound understanding of the statistical methods is necessary when the explainability comes in. Inorder to do that I have decided to start a <ins><em>Probability &amp; Statistics</em></ins> and <ins><em>Linear Algebra</em></ins> series. This wy I would not only be able to learn both but also share with the community which gave me so much. Also, it’s a part of the <em>“Feynmann technique”</em> which I am so fond of.</p>
+
+<h1 id="probability--statistics">
+<a class="anchor" href="#probability--statistics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Probability &amp; Statistics</h1>
+
+<h2 id="books">
+<a class="anchor" href="#books" aria-hidden="true"><span class="octicon octicon-link"></span></a>Books:</h2>
+<ul>
+  <li><a href="https://www.amazon.in/Business-Statistics-Contemporary-Decision-Making/dp/8126521546/ref=pd_sbs_14_2/257-8608761-1170154?_encoding=UTF8&amp;pd_rd_i=8126521546&amp;pd_rd_r=b4f7e949-0d73-4549-b120-e86fb1f606e6&amp;pd_rd_w=VJgyd&amp;pd_rd_wg=doo7E&amp;pf_rd_p=00b53f5d-d1f8-4708-89df-2987ccce05ce&amp;pf_rd_r=RQEDQA024GQ7HPVACRYS&amp;psc=1&amp;refRID=RQEDQA024GQ7HPVACRYS"><em>Business statistics for contemporary decision making</em></a></li>
+  <li><a href="https://www.amazon.in/Mathematical-Statistics-Applications-Dennis-Wackerly/dp/0495110817/ref=sr_1_2?dchild=1&amp;keywords=mathematical+statistics+with+applications+wackerly&amp;qid=1595177027&amp;s=books&amp;sr=1-2"><em>Mathematical Statistics with applications</em></a></li>
+  <li><a href="https://www.amazon.in/All-Statistics-Statistical-Inference-Springer/dp/0387402721"><em>All of statistics</em></a></li>
+</ul>
+
+<h2 id="video-lectures">
+<a class="anchor" href="#video-lectures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video lectures:</h2>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=9FtHB7V14Fo&amp;list=PL5102DFDC6790F3D0"><em>Professor Leonard’s lectures</em></a></li>
+  <li><a href="https://www.youtube.com/watch?v=zcMnu-3wkWo&amp;list=PLTB9VQq8WiaCBK2XrtYn5t9uuPdsNm7YE"><em>Larry Wasserman’s lectures</em></a></li>
+</ul>
+
+<h1 id="linear-algebra">
+<a class="anchor" href="#linear-algebra" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear Algebra</h1>
+
+<h2 id="books-1">
+<a class="anchor" href="#books-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Books:</h2>
+<ul>
+  <li><a href="https://www.amazon.in/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775/ref=sr_1_5?crid=O4QLD0HT1F7A&amp;dchild=1&amp;keywords=gilbert+strang+linear+algebra&amp;qid=1595177337&amp;s=books&amp;sprefix=gilbert+s%2Cstripbooks%2C426&amp;sr=1-5"><em>Introduction to Linear Algebra (Gilbert Strang)</em></a></li>
+</ul>
+
+<h2 id="video-lectures-1">
+<a class="anchor" href="#video-lectures-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video lectures:</h2>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=7UJ4CFRGd-U&amp;list=PL221E2BBF13BECF6C"><em>Gilbert Strang lectures</em></a></li>
+</ul>
+
+<h1 id="applied-resources">
+<a class="anchor" href="#applied-resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Applied resources</h1>
+<ul>
+  <li>My favorite: <a href="http://faculty.marshall.usc.edu/gareth-james/ISL/"><em>An Introduction to Statistical Learning: With Applications in R</em></a>
+</li>
+  <li><a href="https://www.amazon.in/Practical-Statistics-Data-Scientists-Essential/dp/9352135652"><em>Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python</em></a></li>
+  <li><a href="https://pabloinsente.github.io/intro-linear-algebra"><em>Introduction to Linear Algebra for Applied Machine Learning with Python</em></a></li>
+</ul>
+
+<p>As I read the material and understand a concept I will write an article about it. It will be two parellel series one for each. If you want to follow it then all of it will be posted on my <a href="https://medium.com/@abhi08as.as"><strong>Medium</strong></a>. I will see you there!</p>
+
+<p>As always, thank you for reading 😊😃!</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Abhiswain97/MyBlog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/markdown/2020/07/19/statsandlinalg.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Pleasure of finding things out!</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Abhiswain97" title="Abhiswain97"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
