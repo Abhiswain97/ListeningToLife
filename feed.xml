@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="abhishekswain.me/feed.xml" rel="self" type="application/atom+xml" /><link href="abhishekswain.me/" rel="alternate" type="text/html" /><updated>2020-07-19T13:21:02-05:00</updated><id>abhishekswain.me/feed.xml</id><title type="html">Listening To Life</title><subtitle>Pleasure of finding things out!</subtitle><entry><title type="html">Statistics and Linear Algebra for ML/DL</title><link href="abhishekswain.me/markdown/2020/07/19/statsandlinalg.html" rel="alternate" type="text/html" title="Statistics and Linear Algebra for ML/DL" /><published>2020-07-19T00:00:00-05:00</published><updated>2020-07-19T00:00:00-05:00</updated><id>abhishekswain.me/markdown/2020/07/19/statsandlinalg</id><content type="html" xml:base="abhishekswain.me/markdown/2020/07/19/statsandlinalg.html">&lt;p&gt;Hey there! 👋😃&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="abhishekswain.me/feed.xml" rel="self" type="application/atom+xml" /><link href="abhishekswain.me/" rel="alternate" type="text/html" /><updated>2020-07-19T13:46:00-05:00</updated><id>abhishekswain.me/feed.xml</id><title type="html">Listening To Life</title><subtitle>Pleasure of finding things out!</subtitle><entry><title type="html">Statistics and Linear Algebra for ML/DL</title><link href="abhishekswain.me/markdown/2020/07/19/statsandlinalg.html" rel="alternate" type="text/html" title="Statistics and Linear Algebra for ML/DL" /><published>2020-07-19T00:00:00-05:00</published><updated>2020-07-19T00:00:00-05:00</updated><id>abhishekswain.me/markdown/2020/07/19/statsandlinalg</id><content type="html" xml:base="abhishekswain.me/markdown/2020/07/19/statsandlinalg.html">&lt;p&gt;Hey there! 👋😃&lt;/p&gt;
 
 &lt;p&gt;Today, I am gonna talk about something I have been meaning to do for the longest amout of time. I am now many months into my ML journey, so I have now quite a bit of experience. So, I have a basic understanding of the ML/DL algos but it always feels like I lack in explaining why something works over the others. This is where the mathematical part comes in. Having a sound understanding of the statistical methods is necessary when the explainability comes in. Inorder to do that I have decided to start a &lt;ins&gt;&lt;em&gt;Probability &amp;amp; Statistics&lt;/em&gt;&lt;/ins&gt; and &lt;ins&gt;&lt;em&gt;Linear Algebra&lt;/em&gt;&lt;/ins&gt; series. This wy I would not only be able to learn both but also share with the community which gave me so much. Also, it’s a part of the &lt;em&gt;“Feynmann technique”&lt;/em&gt; which I am so fond of.&lt;/p&gt;
 
@@ -6,37 +6,37 @@
 
 &lt;h2 id=&quot;books&quot;&gt;Books:&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/Business-Statistics-Contemporary-Decision-Making/dp/8126521546/ref=pd_sbs_14_2/257-8608761-1170154?_encoding=UTF8&amp;amp;pd_rd_i=8126521546&amp;amp;pd_rd_r=b4f7e949-0d73-4549-b120-e86fb1f606e6&amp;amp;pd_rd_w=VJgyd&amp;amp;pd_rd_wg=doo7E&amp;amp;pf_rd_p=00b53f5d-d1f8-4708-89df-2987ccce05ce&amp;amp;pf_rd_r=RQEDQA024GQ7HPVACRYS&amp;amp;psc=1&amp;amp;refRID=RQEDQA024GQ7HPVACRYS&quot;&gt;&lt;em&gt;Business statistics for contemporary decision making&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/Mathematical-Statistics-Applications-Dennis-Wackerly/dp/0495110817/ref=sr_1_2?dchild=1&amp;amp;keywords=mathematical+statistics+with+applications+wackerly&amp;amp;qid=1595177027&amp;amp;s=books&amp;amp;sr=1-2&quot;&gt;&lt;em&gt;Mathematical Statistics with applications&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/All-Statistics-Statistical-Inference-Springer/dp/0387402721&quot;&gt;&lt;em&gt;All of statistics&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/Business-Statistics-Contemporary-Decision-Making/dp/8126521546/ref=pd_sbs_14_2/257-8608761-1170154?_encoding=UTF8&amp;amp;pd_rd_i=8126521546&amp;amp;pd_rd_r=b4f7e949-0d73-4549-b120-e86fb1f606e6&amp;amp;pd_rd_w=VJgyd&amp;amp;pd_rd_wg=doo7E&amp;amp;pf_rd_p=00b53f5d-d1f8-4708-89df-2987ccce05ce&amp;amp;pf_rd_r=RQEDQA024GQ7HPVACRYS&amp;amp;psc=1&amp;amp;refRID=RQEDQA024GQ7HPVACRYS&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Business statistics for contemporary decision making&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/Mathematical-Statistics-Applications-Dennis-Wackerly/dp/0495110817/ref=sr_1_2?dchild=1&amp;amp;keywords=mathematical+statistics+with+applications+wackerly&amp;amp;qid=1595177027&amp;amp;s=books&amp;amp;sr=1-2&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Mathematical Statistics with applications&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/All-Statistics-Statistical-Inference-Springer/dp/0387402721&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;All of statistics&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;video-lectures&quot;&gt;Video lectures:&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9FtHB7V14Fo&amp;amp;list=PL5102DFDC6790F3D0&quot;&gt;&lt;em&gt;Professor Leonard’s lectures&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=zcMnu-3wkWo&amp;amp;list=PLTB9VQq8WiaCBK2XrtYn5t9uuPdsNm7YE&quot;&gt;&lt;em&gt;Larry Wasserman’s lectures&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9FtHB7V14Fo&amp;amp;list=PL5102DFDC6790F3D0&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Professor Leonard’s lectures&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=zcMnu-3wkWo&amp;amp;list=PLTB9VQq8WiaCBK2XrtYn5t9uuPdsNm7YE&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Larry Wasserman’s lectures&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;linear-algebra&quot;&gt;Linear Algebra&lt;/h1&gt;
 
 &lt;h2 id=&quot;books-1&quot;&gt;Books:&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775/ref=sr_1_5?crid=O4QLD0HT1F7A&amp;amp;dchild=1&amp;amp;keywords=gilbert+strang+linear+algebra&amp;amp;qid=1595177337&amp;amp;s=books&amp;amp;sprefix=gilbert+s%2Cstripbooks%2C426&amp;amp;sr=1-5&quot;&gt;&lt;em&gt;Introduction to Linear Algebra (Gilbert Strang)&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775/ref=sr_1_5?crid=O4QLD0HT1F7A&amp;amp;dchild=1&amp;amp;keywords=gilbert+strang+linear+algebra&amp;amp;qid=1595177337&amp;amp;s=books&amp;amp;sprefix=gilbert+s%2Cstripbooks%2C426&amp;amp;sr=1-5&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Introduction to Linear Algebra (Gilbert Strang)&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;video-lectures-1&quot;&gt;Video lectures:&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=7UJ4CFRGd-U&amp;amp;list=PL221E2BBF13BECF6C&quot;&gt;&lt;em&gt;Gilbert Strang lectures&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=7UJ4CFRGd-U&amp;amp;list=PL221E2BBF13BECF6C&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Gilbert Strang lectures&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;applied-resources&quot;&gt;Applied resources&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;My favorite: &lt;a href=&quot;http://faculty.marshall.usc.edu/gareth-james/ISL/&quot;&gt;&lt;em&gt;An Introduction to Statistical Learning: With Applications in R&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/Practical-Statistics-Data-Scientists-Essential/dp/9352135652&quot;&gt;&lt;em&gt;Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pabloinsente.github.io/intro-linear-algebra&quot;&gt;&lt;em&gt;Introduction to Linear Algebra for Applied Machine Learning with Python&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My favorite: &lt;a href=&quot;http://faculty.marshall.usc.edu/gareth-james/ISL/&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;An Introduction to Statistical Learning: With Applications in R&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/Practical-Statistics-Data-Scientists-Essential/dp/9352135652&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pabloinsente.github.io/intro-linear-algebra&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Introduction to Linear Algebra for Applied Machine Learning with Python&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;As I read the material and understand a concept I will write an article about it. It will be two parellel series one for each. If you want to follow it then all of it will be posted on my &lt;a href=&quot;https://medium.com/@abhi08as.as&quot;&gt;&lt;strong&gt;Medium&lt;/strong&gt;&lt;/a&gt;. I will see you there!&lt;/p&gt;
+&lt;p&gt;As I read the material and understand a concept I will write an article about it. It will be two parellel series one for each. If you want to follow it then all of it will be posted on my &lt;a href=&quot;https://medium.com/@abhi08as.as&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Medium&lt;/strong&gt;&lt;/a&gt;. I will see you there!&lt;/p&gt;
 
 &lt;p&gt;As always, thank you for reading 😊😃!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hey there! 👋😃</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="abhishekswain.me/images/stats_linalg.png" /><media:content medium="image" url="abhishekswain.me/images/stats_linalg.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introduction to Machine Learning course (Refreshing the maths)</title><link href="abhishekswain.me/markdown/2020/07/14/nptelML.html" rel="alternate" type="text/html" title="Introduction to Machine Learning course (Refreshing the maths)" /><published>2020-07-14T00:00:00-05:00</published><updated>2020-07-14T00:00:00-05:00</updated><id>abhishekswain.me/markdown/2020/07/14/nptelML</id><content type="html" xml:base="abhishekswain.me/markdown/2020/07/14/nptelML.html">&lt;p&gt;Hey there! 👋😃&lt;/p&gt;
 
