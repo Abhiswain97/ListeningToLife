@@ -11,44 +11,44 @@ layout: default
 
 
   {% if site.paginate %}
-    {% assign rawnotes = paginator.notes %}
+    {% assign rawposts = paginator.posts %}
   {% else %}
-    {% assign rawnotes = site.notes %}
+    {% assign rawposts = site.posts %}
   {% endif %}
 
-  <!-- Hide notes if front matter flag hide:true -->
-  {% assign notes = ''|split:'' %}
-  {% for post in rawnotes %}
+  <!-- Hide posts if front matter flag hide:true -->
+  {% assign posts = ''|split:'' %}
+  {% for post in rawposts %}
     {% if post.hide != true %}
-      {% assign notes = notes|push:post%}
+      {% assign posts = posts|push:post%}
     {% endif %}
   {% endfor %}
 
-  <!-- Sort notes by rank, then date -->
-  {% assign grouped_notes = notes | group_by: "sticky_rank" | sort: "name", "last" %}
-  {% assign sticky_notes = ''|split:'' %}
-  {% assign non_sticky_notes = '' | split:'' %}
+  <!-- Sort posts by rank, then date -->
+  {% assign grouped_posts = posts | group_by: "sticky_rank" | sort: "name", "last" %}
+  {% assign sticky_posts = ''|split:'' %}
+  {% assign non_sticky_posts = '' | split:'' %}
 
  
-  {% for gp in grouped_notes %}
+  {% for gp in grouped_posts %}
     {%- if gp.name == "" -%}
-      {% assign non_sticky_notes = gp.items | sort: "date" | reverse %}
+      {% assign non_sticky_posts = gp.items | sort: "date" | reverse %}
     {%- else %}
-      {% assign sticky_notes = sticky_notes | concat: gp.items %}
+      {% assign sticky_posts = sticky_posts | concat: gp.items %}
     {%- endif -%}
   {% endfor %}
 
-   <!-- Assemble final sorted notes array -->
-  {% assign sticky_notes = sticky_notes | sort: "sticky_rank", "last" %}
-  {% assign notes = sticky_notes | concat: non_sticky_notes %}
+   <!-- Assemble final sorted posts array -->
+  {% assign sticky_posts = sticky_posts | sort: "sticky_rank", "last" %}
+  {% assign posts = sticky_posts | concat: non_sticky_posts %}
 
-  {%- if notes.size > 0 -%}
+  {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in notes -%}
+      {%- for post in posts -%}
       <li>
         {%- if site.show_image -%}
             {%- include post_list_image_card.html -%}
@@ -59,7 +59,7 @@ layout: default
       {%- endfor -%}
     </ul>
 
-    {% if site.paginate and site.notes.size > site.paginate %}
+    {% if site.paginate and site.posts.size > site.paginate %}
       <div class="pager">
         <ul class="pagination">
         {%- if paginator.previous_page %}
