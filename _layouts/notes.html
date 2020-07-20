@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<div class="notes">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content | markdownify }}
+
+
+  {% if site.paginate %}
+    {% assign rawnotes = paginator.notes %}
+  {% else %}
+    {% assign rawnotes = site.notes %}
+  {% endif %}
+
+  <!-- Hide notes if front matter flag hide:true -->
+  {% assign notes = ''|split:'' %}
+  {% for post in rawnotes %}
+    {% if post.hide != true %}
+      {% assign notes = notes|push:post%}
+    {% endif %}
+  {% endfor %}
+
+  <!-- Sort notes by rank, then date -->
+  {% assign grouped_notes = notes | group_by: "sticky_rank" | sort: "name", "last" %}
+  {% assign sticky_notes = ''|split:'' %}
+  {% assign non_sticky_notes = '' | split:'' %}
+
+ 
+  {% for gp in grouped_notes %}
+    {%- if gp.name == "" -%}
+      {% assign non_sticky_notes = gp.items | sort: "date" | reverse %}
+    {%- else %}
+      {% assign sticky_notes = sticky_notes | concat: gp.items %}
+    {%- endif -%}
+  {% endfor %}
+
+   <!-- Assemble final sorted notes array -->
+  {% assign sticky_notes = sticky_notes | sort: "sticky_rank", "last" %}
+  {% assign notes = sticky_notes | concat: non_sticky_notes %}
+
+  {%- if notes.size > 0 -%}
+    {%- if page.list_title -%}
+      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <ul class="post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in notes -%}
+      <li>
+        {%- if site.show_image -%}
+            {%- include post_list_image_card.html -%}
+        {% else %}
+            {%- include post_list.html -%}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    {% if site.paginate and site.notes.size > site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+
+  {%- endif -%}
+
+</div>

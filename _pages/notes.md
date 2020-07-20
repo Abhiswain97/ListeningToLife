@@ -1,6 +1,5 @@
 ---
-layout: home
-title: Notes
+layout: notes
 permalink: /notes/
 ---
 
