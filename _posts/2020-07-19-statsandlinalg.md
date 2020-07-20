@@ -37,6 +37,8 @@ Today, I am gonna talk about something I have been meaning to do for the longest
 - My favorite: [*An Introduction to Statistical Learning: With Applications in R*](http://faculty.marshall.usc.edu/gareth-james/ISL/){:target="_blank"}
 - [*Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python*](https://www.amazon.in/Practical-Statistics-Data-Scientists-Essential/dp/9352135652){:target="_blank"}
 - [*Introduction to Linear Algebra for Applied Machine Learning with Python*](https://pabloinsente.github.io/intro-linear-algebra){:target="_blank"}
+- Peter Norvig's: [*A Concrete Introduction to Probability (using Python)*](https://github.com/norvig/pytudes/blob/master/ipynb/Probability.ipynb){:target="_blank"}
+
 
 As I read the material and understand a concept I will write an article about it. It will be two parellel series one for each. If you want to follow it then all of it will be posted on my [**Medium**](https://medium.com/@abhi08as.as){:target="_blank"}. I will see you there!
 
