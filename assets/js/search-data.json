@@ -74,6 +74,17 @@
 
   
       ,"page3": {
+          "title": "Notes",
+          "content": "",
+          "url": "abhishekswain.me/notes/",
+          "relUrl": "/notes/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page4": {
           "title": "Projects",
           "content": "MyVision: Customizability meets abstraction . This is my Computer Vision toolkit. It’s a wrapper over PyTorch combining things I like from different libraries like fastai, keras etc. . Leaf disease detection using image segmentation . This is my final year project about detecting plant leaf disease and segmenting the diseased part. However, there’s a catch in my project, I have done it without the use of any cnn for segmentation. Instead, it uses a cascade of classifiers to do the detection and segmentation. . CheXNet: Radiologist-Level Pneumonia Detection using deep learning . This project is an implementation of the paper I worked on. CheXNet detects 14 different pathologies from chest X-rays. It uses a Densenet-121 for detection. .",
           "url": "abhishekswain.me/projects/",
@@ -103,7 +114,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "abhishekswain.me/robots.txt",
