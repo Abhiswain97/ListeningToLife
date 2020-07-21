@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Lessons learned the hardway
-categories: [markdown]
+categories: [health, lifestyle]
 comments: true
 title: Importance of a proper posture 
 ---
