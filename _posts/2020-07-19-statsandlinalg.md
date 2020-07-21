@@ -20,6 +20,7 @@ Today, I am gonna talk about something I have been meaning to do for the longest
 - [*All of statistics*](https://www.amazon.in/All-Statistics-Statistical-Inference-Springer/dp/0387402721){:target="_blank"}
 
 ## Video lectures:
+- [*Harvard Stats 110*](https://www.youtube.com/watch?v=KbB0FjPg0mw&list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo)
 - [*Professor Leonard's lectures*](https://www.youtube.com/watch?v=9FtHB7V14Fo&list=PL5102DFDC6790F3D0){:target="_blank"}
 - [*Larry Wasserman's lectures*](https://www.youtube.com/watch?v=zcMnu-3wkWo&list=PLTB9VQq8WiaCBK2XrtYn5t9uuPdsNm7YE){:target="_blank"}
 
@@ -31,13 +32,12 @@ Today, I am gonna talk about something I have been meaning to do for the longest
 
 ## Video lectures:
 - [*Gilbert Strang lectures*](https://www.youtube.com/watch?v=7UJ4CFRGd-U&list=PL221E2BBF13BECF6C){:target="_blank"}
-- [*Computational linear algebra by Rachel Thomas*](https://www.youtube.com/watch?v=8iGzBMboA0I&list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY)
 
 
 # Applied resources
 - My favorite: [*An Introduction to Statistical Learning: With Applications in R*](http://faculty.marshall.usc.edu/gareth-james/ISL/){:target="_blank"}
 - [*Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python*](https://www.amazon.in/Practical-Statistics-Data-Scientists-Essential/dp/9352135652){:target="_blank"}
-- [*Think Stats(Learn stats usin Python)*](http://greenteapress.com/thinkstats2/thinkstats2.pdf){:target="_blank"}
+- [*Think Stats(Learn stats using Python)*](http://greenteapress.com/thinkstats2/thinkstats2.pdf){:target="_blank"}
 - [*Introduction to Linear Algebra for Applied Machine Learning with Python*](https://pabloinsente.github.io/intro-linear-algebra){:target="_blank"}
 - Peter Norvig's: [*A Concrete Introduction to Probability (using Python)*](https://github.com/norvig/pytudes/blob/master/ipynb/Probability.ipynb){:target="_blank"}
 
@@ -46,3 +46,11 @@ Today, I am gonna talk about something I have been meaning to do for the longest
 As I read the material and understand a concept I will write an article about it. It will be two parellel series one for each. If you want to follow it then all of it will be posted on my [**Medium**](https://medium.com/@abhi08as.as){:target="_blank"}. I will see you there!
 
 As always, thank you for reading 😊😃!
+
+
+# Update(21/07/2020)
+
+I need to strike a balance between theory and application. I actually read few chapters of the book but found that I am more into the *code-first* approach to learning. So, there's a slight modification to my plan. For linear algebra, I am using [*Computational linear algebra by Rachel Thomas*](https://www.youtube.com/watch?v=8iGzBMboA0I&list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY). I have just begun and I already like it. I will use it parellely with Glibert Strang's linear algebra course. 
+
+For proabability & stats: *Think Stats* + any theory course mentioned.
+
