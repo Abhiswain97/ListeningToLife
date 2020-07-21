@@ -31,6 +31,7 @@ Today, I am gonna talk about something I have been meaning to do for the longest
 
 ## Video lectures:
 - [*Gilbert Strang lectures*](https://www.youtube.com/watch?v=7UJ4CFRGd-U&list=PL221E2BBF13BECF6C){:target="_blank"}
+- [*Computational linear algebra by Rachel Thomas*](https://www.youtube.com/watch?v=8iGzBMboA0I&list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY)
 
 
 # Applied resources
