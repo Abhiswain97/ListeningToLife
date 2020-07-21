@@ -14,7 +14,7 @@ If you are like me who loves to learn stuff on your own all the time, especailly
 
 1. Watch this amazing video by a physiotherapist:
 
-> youtube: (https://www.youtube.com/watch?v=2NOsE-VPpkE)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2NOsE-VPpkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 It did me a world of good especially the last exercise. 
 
