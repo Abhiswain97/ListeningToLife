@@ -4,7 +4,7 @@ layout: post
 description: Diving deep into the statistical underpinings and linear algebraic foundations of learning 
 categories: [machine learning, maths, books]
 comments: true
-image: images/stats_linalg.png
+image: images/statslinalg.jng
 title: Statistics and Linear Algebra for ML/DL
 ---
 
