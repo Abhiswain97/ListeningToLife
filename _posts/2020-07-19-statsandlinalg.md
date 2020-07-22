@@ -10,7 +10,7 @@ title: Statistics and Linear Algebra for ML/DL
 
 Hey there! 👋😃
 
-Today, I am gonna talk about something I have been meaning to do for the longest amout of time. I am now many months into my ML journey, so I have now quite a bit of experience. So, I have a basic understanding of the ML/DL algos but it always feels like I lack in explaining why something works over the others. This is where the mathematical part comes in. Having a sound understanding of the statistical methods is necessary when the explainability comes in. Inorder to do that I have decided to start a <ins>*Probability & Statistics*</ins> and <ins>*Linear Algebra*</ins> series. This wy I would not only be able to learn both but also share with the community which gave me so much. Also, it's a part of the *"Feynmann technique"* which I am so fond of.
+Today, I am gonna talk about something I have been meaning to do for the longest amout of time. I am now many months into my ML journey, so I have now quite a bit of experience. So, I have a basic understanding of the ML/DL algos but it always feels like I lack in explaining why something works over the others. This is where the mathematical part comes in. Having a sound understanding of the statistical methods is necessary when the explainability comes in. Inorder to do that I have decided to start a <ins>*Probability & Statistics*</ins> and <ins>*Linear Algebra*</ins> series. This way I would not only be able to learn both but also share with the community which gave me so much. Also, it's a part of the *"Feynmann technique"* which I am so fond of.
 
 # Probability & Statistics
 
@@ -42,7 +42,6 @@ Today, I am gonna talk about something I have been meaning to do for the longest
 - Peter Norvig's: [*A Concrete Introduction to Probability (using Python)*](https://github.com/norvig/pytudes/blob/master/ipynb/Probability.ipynb){:target="_blank"}
 
 
-
 As I read the material and understand a concept I will write an article about it. It will be two parellel series one for each. If you want to follow it then all of it will be posted on my [**Medium**](https://medium.com/@abhi08as.as){:target="_blank"}. I will see you there!
 
 As always, thank you for reading 😊😃!
@@ -50,7 +49,7 @@ As always, thank you for reading 😊😃!
 
 # Update(21/07/2020)
 
-I need to strike a balance between theory and application. I actually read few chapters of the book but found that I am more into the *code-first* approach to learning. So, there's a slight modification to my plan. For linear algebra, I am using [*Computational linear algebra by Rachel Thomas*](https://www.youtube.com/watch?v=8iGzBMboA0I&list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY). I have just begun and I already like it. I will use it parellely with Glibert Strang's linear algebra course. 
+I need to strike a balance between theory and application. I actually read few chapters of the book but found that I am more into the *code-first* approach to learning. So, there's a slight modification to my plan. For linear algebra, I am using [*Computational linear algebra by Rachel Thomas*](https://www.youtube.com/watch?v=8iGzBMboA0I&list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY){:target="_blank"}. I have just begun and I already like it. I will use it parellely with Glibert Strang's linear algebra course. 
 
 For proabability & stats: *Think Stats* + any theory course mentioned.
 
