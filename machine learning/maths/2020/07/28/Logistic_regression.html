@@ -181,8 +181,8 @@ window.onload = wrap_img;
 <p>Hey! This post is about my introduction to the world of Julia. I took this challenge of learning Julia and making something in it. Since Julia is pretty similar to Python, I made a hypothesis. That is can I learn julia in a day and be up and running with something in two days? That was the challenge I took. Believe me or not but I did do it. Actually, if you're from a python background and have some expereince in it, then learning Julia is going to be fun and breezy for you. So, here I am after my two day rendezvous with Julia for two days.</p>
 <p>So, what I used to learn Julia?
 I used resources from <a href="https://juliaacademy.com/">julia academy</a></p>
-<p>What did I implement?</p>
-<p>I decided to go for one the resources I learnt deep learning from: <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome">Neural Networks and Deep Learning</a></p>
+<p>What did I implement?
+I decided to go for one the resources I learnt deep learning from: <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome">Neural Networks and Deep Learning</a></p>
 <ul>
 <li>
 <p>Impemented the Julia version of <a href="https://www.coursera.org/learn/neural-networks-deep-learning/notebook/zAgPl/logistic-regression-with-a-neural-network-mindset">Week 2 assignment</a> of <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome">Neural Networks and Deep Learning</a> course.</p>
@@ -194,6 +194,7 @@ I used resources from <a href="https://juliaacademy.com/">julia academy</a></p>
 <li>Training is done, inference is on the way!</li>
 </ul>
 <p>I hope it's useful to you. It was a lot of fun and I am in love with Julia ❤</p>
+<p>Let's begin!</p>
 
 </div>
 </div>
@@ -800,11 +801,16 @@ Learning rate: $\alpha = 0.09$, iterations(epochs): 150</p>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">α</span> <span class="o">=</span> <span class="mf">0.009</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+
+<span class="n">α</span> <span class="o">=</span> <span class="mf">0.009</span>
 
 <span class="n">cost</span> <span class="o">=</span> <span class="n">Array</span><span class="p">{</span><span class="n">Float64</span><span class="p">,</span> <span class="mi">2</span><span class="p">}(</span><span class="n">undef</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
@@ -829,6 +835,7 @@ Learning rate: $\alpha = 0.09$, iterations(epochs): 150</p>
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
