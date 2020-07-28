@@ -4,7 +4,7 @@ layout: post
 description: Logistic regression from scratch in Julia
 categories: [machine learning, maths]
 comments: true
-image: images/download.jiff
+image: images/julia.jpg
 title: Welcome, Julia!
 ---
 
@@ -89,12 +89,12 @@ X, y = data_train[:, 1:4], data_train[:, 5];
 ## **Mathematical expression of the algorithm**:
 
 For one example $x^{(i)}$:
-$$z^{(i)} = w^T x^{(i)} + b \tag{1}$$
-$$\hat{y}^{(i)} = a^{(i)} = sigmoid(z^{(i)})\tag{2}$$ 
-$$ \mathcal{L}(a^{(i)}, y^{(i)}) =  - y^{(i)}  \log(a^{(i)}) - (1-y^{(i)} )  \log(1-a^{(i)})\tag{3}$$
+$z^{(i)} = w^T x^{(i)} + b \tag{1}$
+$\hat{y}^{(i)} = a^{(i)} = sigmoid(z^{(i)})\tag{2}$ 
+$\mathcal{L}(a^{(i)}, y^{(i)}) =  - y^{(i)}  \log(a^{(i)}) - (1-y^{(i)} )  \log(1-a^{(i)})\tag{3}$
 
 The cost is then computed by summing over all training examples:
-$$ J = \frac{1}{m} \sum_{i=1}^m \mathcal{L}(a^{(i)}, y^{(i)})\tag{6}$$
+$J = \frac{1}{m} \sum_{i=1}^m \mathcal{L}(a^{(i)}, y^{(i)})\tag{6}$
 
 ## Sigmoid
 Applies sigmoid to the vector
@@ -210,8 +210,8 @@ Forward Propagation:
 
 Here are the two formulas you will be using: 
 
-$$ \frac{\partial J}{\partial w} = \frac{1}{m}X(A-Y)^T\tag{7}$$
-$$ \frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)}-y^{(i)})\tag{8}$$
+$\frac{\partial J}{\partial w} = \frac{1}{m}X(A-Y)^T\tag{7}$$
+$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)}-y^{(i)})\tag{8}$
 
 
 
@@ -474,7 +474,7 @@ ylabel!("cost")
 
 
 
-![svg](output_24_0.svg)
+![](https://github.com/Abhiswain97/MyBlog/blob/master/images/julia_loss.jpg)
 
 
 
