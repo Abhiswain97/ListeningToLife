@@ -155,7 +155,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Normalization">Normalization </a></li>
 <li class="toc-entry toc-h2"><a href="#Mathematical-expression-of-the-algorithm:">Mathematical expression of the algorithm: </a></li>
 <li class="toc-entry toc-h2"><a href="#Sigmoid">Sigmoid </a></li>
-<li class="toc-entry toc-h2"><a href="#Random-initialization">Random initialization </a></li>
+<li class="toc-entry toc-h2"><a href="#Zero-initialization">Zero initialization </a></li>
 <li class="toc-entry toc-h2"><a href="#Forward-and-Backward-propagation">Forward and Backward propagation </a></li>
 <li class="toc-entry toc-h2"><a href="#Model">Model </a></li>
 <li class="toc-entry toc-h2"><a href="#Plotting">Plotting </a></li>
@@ -250,8 +250,8 @@ I decided to go for one the resources I learnt deep learning from: <a href="http
     <span class="n">X_test</span> <span class="o">=</span> <span class="n">convert</span><span class="p">(</span><span class="n">Array</span><span class="p">{</span><span class="n">Float64</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="n">h5read</span><span class="p">(</span><span class="n">test_file</span><span class="p">,</span> <span class="s2">"test_set_x"</span><span class="p">))</span>
     <span class="n">y_test</span> <span class="o">=</span> <span class="n">convert</span><span class="p">(</span><span class="n">Array</span><span class="p">{</span><span class="n">Float64</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span> <span class="n">h5read</span><span class="p">(</span><span class="n">test_file</span><span class="p">,</span> <span class="s2">"test_set_y"</span><span class="p">))</span>
     
-    <span class="n">num_features_train_X</span> <span class="o">=</span> <span class="n">size</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">num_features_test_X</span> <span class="o">=</span> <span class="n">size</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">num_features_train_X</span> <span class="o">=</span> <span class="n">size</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">num_features_test_X</span> <span class="o">=</span> <span class="n">size</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
     
     <span class="n">X_train</span> <span class="o">=</span> <span class="n">reshape</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="p">(</span><span class="n">num_features_train_X</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="mi">4</span><span class="p">)))</span>
     <span class="n">y_train</span> <span class="o">=</span> <span class="n">reshape</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
@@ -486,10 +486,10 @@ $$ J = \frac{1}{m} \sum_{i=1}^m \mathcal{L}(a^{(i)}, y^{(i)})\tag{6}$$
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Random-initialization">
-<a class="anchor" href="#Random-initialization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Random initialization<a class="anchor-link" href="#Random-initialization"> </a>
+<h2 id="Zero-initialization">
+<a class="anchor" href="#Zero-initialization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zero initialization<a class="anchor-link" href="#Zero-initialization"> </a>
 </h2>
-<p>Initialize <code>w</code> &amp; <code>b</code> with with random values between (0, 1)</p>
+<p>Initialize <code>w</code> &amp; <code>b</code> with with Zeros</p>
 
 </div>
 </div>
