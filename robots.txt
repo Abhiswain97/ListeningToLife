@@ -1,1 +1,1 @@
-Sitemap: abhishekswain.me/sitemap.xml
+Sitemap: https://abhishekswain.me/sitemap.xml
