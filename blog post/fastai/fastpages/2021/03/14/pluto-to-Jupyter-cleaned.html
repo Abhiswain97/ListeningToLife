@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Pluto.jl + fastpages! | Listening To Life</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Pluto.jl + fastpages!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="converting pluto.jl notebook to jupyter and cleaning them to host as a fastpages blog post" />
+<meta property="og:description" content="converting pluto.jl notebook to jupyter and cleaning them to host as a fastpages blog post" />
+<link rel="canonical" href="https://abhishekswain.me/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html" />
+<meta property="og:url" content="https://abhishekswain.me/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html" />
+<meta property="og:site_name" content="Listening To Life" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-14T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"converting pluto.jl notebook to jupyter and cleaning them to host as a fastpages blog post","headline":"Pluto.jl + fastpages!","dateModified":"2021-03-14T00:00:00-06:00","datePublished":"2021-03-14T00:00:00-06:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://abhishekswain.me/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html"},"url":"https://abhishekswain.me/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://abhishekswain.me/feed.xml" title="Listening To Life" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Pluto.jl + fastpages! | Listening To Life</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Pluto.jl + fastpages!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="converting pluto.jl notebook to jupyter and cleaning them to host as a fastpages blog post" />
+<meta property="og:description" content="converting pluto.jl notebook to jupyter and cleaning them to host as a fastpages blog post" />
+<link rel="canonical" href="https://abhishekswain.me/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html" />
+<meta property="og:url" content="https://abhishekswain.me/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html" />
+<meta property="og:site_name" content="Listening To Life" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-14T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"converting pluto.jl notebook to jupyter and cleaning them to host as a fastpages blog post","headline":"Pluto.jl + fastpages!","dateModified":"2021-03-14T00:00:00-06:00","datePublished":"2021-03-14T00:00:00-06:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://abhishekswain.me/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html"},"url":"https://abhishekswain.me/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://abhishekswain.me/feed.xml" title="Listening To Life" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Listening To Life</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/aboutme/">About Me</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Pluto.jl + fastpages!</h1><p class="page-description">converting pluto.jl notebook to jupyter and cleaning them to host as a fastpages blog post</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-03-14T00:00:00-06:00" itemprop="datePublished">
+        Mar 14, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#blog post">blog post</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#fastai">fastai</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#fastpages">fastpages</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/Abhiswain97/MyBlog/tree/master/_notebooks/2021-03-14-pluto-to-Jupyter-cleaned.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Abhiswain97/MyBlog/master?filepath=_notebooks%2F2021-03-14-pluto-to-Jupyter-cleaned.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Abhiswain97/MyBlog/blob/master/_notebooks/2021-03-14-pluto-to-Jupyter-cleaned.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#What-is-fastpages-and-why-to-use-it?">What is fastpages and why to use it? </a></li>
+<li class="toc-entry toc-h1"><a href="#Julia-+-fastpages">Julia + fastpages </a></li>
+<li class="toc-entry toc-h1"><a href="#Pluto.jl">Pluto.jl </a></li>
+<li class="toc-entry toc-h1"><a href="#Pluto.jl-+-fastpages!">Pluto.jl + fastpages! </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Steps">Steps </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-03-14-pluto-to-Jupyter-cleaned.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hi all! Today's post is for people who want to use Julia to write blog posts. I expect that you must have heard about this cool thing by <a href="https://github.com/fastai">fast.ai</a> folks called <a href="https://github.com/fastai/fastpages">fastpages</a>.</p>
+<h1 id="What-is-fastpages-and-why-to-use-it?">
+<a class="anchor" href="#What-is-fastpages-and-why-to-use-it?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is fastpages and why to use it?<a class="anchor-link" href="#What-is-fastpages-and-why-to-use-it?"> </a>
+</h1>
+<blockquote>
+<p>An easy to use blogging platform, with support for Jupyter notebooks, Word docs, and Markdown.</p>
+</blockquote>
+<p>Whole of my blog is made using fastpages. It takes just a few minutes to setup a whole blog using fastpages. Now, the best feature of fastpages is that you can use Jupyter notebooks to write a post and fastpages will automatically convert them into a blog post on your blog. Now this is seriously cool! Not just that you can write posts using regular markdown files, and also word document. fastpages will automatically render them as posts. You can refer their repo for more details:<a href="https://github.com/fastai/fastpages">fastpages</a>.</p>
+<h1 id="Julia-+-fastpages">
+<a class="anchor" href="#Julia-+-fastpages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Julia + fastpages<a class="anchor-link" href="#Julia-+-fastpages"> </a>
+</h1>
+<p>I have been trying julia out for few days now and instead of Python I wanted to use Julia to write blog posts. You can install the IJulia package and use Jupyter notebooks to write blog posts just like you do it in python. However, I would like to bring to your notice another very nice tool which I found about during JuliaCon 2020. I have used it a lot now and I can tell you that it addresses a lot of pitfalls of Jupyter Notebooks. It kind of changes the game. Currently, it only supports Julia and not Python. It's called <a href="https://github.com/fonsp/Pluto.jl">Pluto.jl</a>.</p>
+<h1 id="Pluto.jl">
+<a class="anchor" href="#Pluto.jl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pluto.jl<a class="anchor-link" href="#Pluto.jl"> </a>
+</h1>
+<p>Pluto.jl is:</p>
+<blockquote>
+<p>Simple reactive notebooks for Julia</p>
+</blockquote>
+<p>Let me explain it to you what <strong>"reactivity"</strong> is. In Jupyter notebook, say you have used a function which you haven't imported. Naturally, as you run the cell it would raise an error. To fix this error, you go all the way to the top where your imports are, import the particular function and re-run all the cells where the function is used. This is where Pluto.jl shines over Jupyter notebook. In Pluto as you import the function all the cells which depend on it are re-run automatically. It's pretty smart in figuring out dependencies. This is a very powerful feature.</p>
+<h1 id="Pluto.jl-+-fastpages!">
+<a class="anchor" href="#Pluto.jl-+-fastpages!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pluto.jl + fastpages!<a class="anchor-link" href="#Pluto.jl-+-fastpages!"> </a>
+</h1>
+<p>Finally we look at how we can use Pluto.jl to write blog posts. Now, fastpages requires the notebooks to be Ipython notebooks,to be able to render them as posts. So, what do we do? We will convert the Pluto.jl notebooks to Ipython notebook first and then use them.</p>
+<p>To do this, there's this tool made by the creator of Pluto.jl we can use -&gt; <a href="https://observablehq.com/@olivier_plas/pluto-jl-jupyter-conversion">pluto-jl-jupyter-conversion</a>. Pluto saves your notebooks as .jl files. All you have to do is upload your Pluto.jl notebook and it will convert it into Jupyter notebook after which u can download it.
+There's only one issue. The converted notebook has all the cells as code cells. Even the cells we used as markdown cells are converted to code cells. We need to fix this!
+I have made a simple utility to solve this issue -&gt; <a href="https://github.com/Abhiswain97/pluto-jl-jupyter-conversion-cleaner">pluto-jl-jupyter-conversion-cleaner</a></p>
+<p>So, finally these are the steps you need to follow to convert your Pluto.jl notebook into a Jupyter notebook you can use with fastpages</p>
+<h2 id="Steps">
+<a class="anchor" href="#Steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps<a class="anchor-link" href="#Steps"> </a>
+</h2>
+<ul>
+<li>
+<p>Use <a href="https://observablehq.com/@olivier_plas/pluto-jl-jupyter-conversion">pluto-jl-jupyter-conversion</a> to convert the Pluto.jl notebook to a Ipython notebook. Download the Ipython notebook.</p>
+</li>
+<li>
+<p>After that:</p>
+</li>
+</ul>
+
+<pre><code>git clone https://github.com/Abhiswain97/pluto-jl-jupyter-conversion-cleaner.git
+cd pluto-jl-jupyter-conversion-cleaner
+python cleaner.py --fname &lt;your converted .ipynb file&gt;</code></pre>
+<p>The converted file is saved as file-name-cleaned.ipynb in the same folder as your original Jupyter notebook.</p>
+<p>Now, all you got to do is make it in the format fastpages expects, it has to be saved as: <em>yyyy-mm-dd-<name>.ipynb&lt;/em&gt;. There are various other options you can specify. Have a look at: <a href="https://github.com/fastai/fastpages#customizing-blog-posts-with-front-matter">customizing-blog-posts-with-front-matter</a>&lt;/p&gt;
+<p>Yay! we finally have a Jupyter notebook we can use with fastpages!</p>
+<p>If you made it this far, then let me tell you something, the post you're reading right now is written using Pluto.jl &amp; fastpages!</p>
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+
+</name></em></p>
+</div>
+</div></div>
+</div>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Abhiswain97/MyBlog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog%20post/fastai/fastpages/2021/03/14/pluto-to-Jupyter-cleaned.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Pleasure of finding things out!</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Abhiswain97" title="Abhiswain97"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
