@@ -63,7 +63,7 @@ python cleaner.py --fname <your converted .ipynb file>
 
 The converted file is saved as file-name-cleaned.ipynb in the same folder as your original Jupyter notebook.
 
-Now, all you got to do is make it in the format fastpages expects, it has to be saved as: *yyyy-mm-dd-<name>.ipynb*. There are various other options you can specify. Have a look at: [customizing-blog-posts-with-front-matter](https://github.com/fastai/fastpages#customizing-blog-posts-with-front-matter)
+Now, all you got to do is make it in the format fastpages expects, it has to be saved as: *yyyy-mm-dd-<name>.ipynb*. There are various other options you can specify. Have a look at their docs at: https://github.com/fastai/fastpages
 
 Yay! we finally have a Jupyter notebook we can use with fastpages!
 
