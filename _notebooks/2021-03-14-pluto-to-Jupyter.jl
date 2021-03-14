@@ -18,19 +18,22 @@ md"""
 
 # ╔═╡ 17224d40-8431-11eb-07db-d5e5f18760cb
 md"""
+
+# Pluto.jl + Fastpages
+
 Hi all! Today's post is for people who want to use Julia to write blog posts. I expect that you must have heard about this cool thing by [fast.ai](https://github.com/fastai) folks called [fastpages](https://fastpages.fast.ai/)
 
-# What is fastpages and why to use it?
+## What is fastpages and why to use it?
 
 > An easy to use blogging platform, with support for Jupyter notebooks, Word docs, and Markdown.
 
 Whole of my blog is made using fastpages. It takes just a few minutes to setup a whole blog using fastpages. Now, the best feature of fastpages is that you can use Jupyter notebooks to write a post and fastpages will automatically convert them into a blog post on your blog. Now this is seriously cool! Not just that you can write posts using regular markdown files, and also word document. fastpages will automatically render them as posts. You can refer their repo for more details: [fastpages](https://github.com/fastai/fastpages).
 
-# Julia + fastpages
+## Julia + fastpages
 
 I have been trying julia out for few days now and instead of Python I wanted to use Julia to write blog posts. You can install the IJulia package and use Jupyter notebooks to write blog posts just like you do it in python. However, I would like to bring to your notice another very nice tool which I found about during JuliaCon 2020. I have used it a lot now and I can tell you that it addresses a lot of pitfalls of Jupyter Notebooks. It kind of changes the game. Currently, it only supports Julia and not Python. It's called [Pluto.jl](https://github.com/fonsp/Pluto.jl).
 
-# Pluto.jl
+## Pluto.jl
 
 Pluto.jl is: 
 
@@ -38,7 +41,7 @@ Pluto.jl is:
 
 Let me explain it to you what **"reactivity"** is. In Jupyter notebook, say you have used a function which you haven't imported. Naturally, as you run the cell it would raise an error. To fix this error, you go all the way to the top where your imports are, import the particular function and re-run all the cells where the function is used. This is where Pluto.jl shines over Jupyter notebook. In Pluto as you import the function all the cells which depend on it are re-run automatically. It's pretty smart in figuring out dependencies. This is a very powerful feature.
 
-# Pluto.jl + fastpages!
+## Pluto.jl + fastpages!
 
 Finally we look at how we can use Pluto.jl to write blog posts. Now, fastpages requires the notebooks to be Ipython notebooks,to be able to render them as posts. So, what do we do? We will convert the Pluto.jl notebooks to Ipython notebook first and then use them. 
 
@@ -49,7 +52,7 @@ I have made a simple utility to solve this issue -> [pluto-jl-jupyter-conversion
 
 So, finally these are the steps you need to follow to convert your Pluto.jl notebook into a Jupyter notebook you can use with fastpages 
 
-## Steps
+### Steps
 
 - Use [pluto-jl-jupyter-conversion](https://observablehq.com/@olivier_plas/pluto-jl-jupyter-conversion) to convert the Pluto.jl notebook to a Ipython notebook. Download the Ipython notebook.
 
