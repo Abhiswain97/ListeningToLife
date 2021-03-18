@@ -54,15 +54,20 @@ So, finally these are the steps you need to follow to convert your Pluto.jl note
 
 ### Steps
 
-- Use [pluto-jl-jupyter-conversion](https://observablehq.com/@olivier_plas/pluto-jl-jupyter-conversion) to convert the Pluto.jl notebook to a Ipython notebook. Download the Ipython notebook.
 
-- After that:
+1. Use [pluto-jl-jupyter-conversion](https://observablehq.com/@olivier_plas/pluto-jl-jupyter-conversion) to convert the Pluto.jl notebook to a Ipython notebook.
 
-```
-git clone https://github.com/Abhiswain97/pluto-jl-jupyter-conversion-cleaner.git
-cd pluto-jl-jupyter-conversion-cleaner
-python cleaner.py --fname <your converted .ipynb file>
-```
+2. Install all the requirements:
+
+   For windows: `run.bat` \
+   For Linux: `sh run.sh` \
+
+3. Clone repo and use it:
+   ```
+   git clone https://github.com/Abhiswain97/pluto-jl-jupyter-conversion-cleaner.git
+   cd pluto-jl-jupyter-conversion-cleaner
+   python cleaner.py --path <your converted .ipynb file>
+   ```
 
 The converted file is saved as file-name-cleaned.ipynb in the same folder as your original Jupyter notebook.
 
